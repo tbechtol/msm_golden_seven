@@ -22,7 +22,7 @@
       <tbody>
         <% @movies.each do |movie| %>
         <tr>
-          <td><img src = "<% movie.image_url %>" width="80"></td>
+          <td><img src = "<%= movie.image_url %>" width="80"></td>
           <td><%= movie.title %></td>
           <td><%= movie.year %></td>
           <td><%= movie.duration %></td>
@@ -31,7 +31,9 @@
           <td>
             <a href="/movies/<%= movie.id %>" class="btn btn-primary">Show</a>
           </td>
-          <td>Edit button</td>
+          <td>
+            <a href="/movies/<%= movie.id %>/edit_form" class="btn btn-primary">Edit</a>
+          </td>
           <td>
             <a href="/delete_movie/<%= movie.id %>" class="btn btn-primary">Delete</a>
           </td>
