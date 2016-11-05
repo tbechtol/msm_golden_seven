@@ -1,5 +1,10 @@
 class DirectorsController < ApplicationController
 
+  def index
+@directors = Directors.all
+
+  end
+
   def new_form
 
   end

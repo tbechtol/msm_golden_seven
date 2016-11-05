@@ -1,3 +1,42 @@
-<h1>Howdy!</h1>
+<div class="page-header">
+  <h1>Movies</h1>
+</div>
 
-<%= @movies %>
+    <p><a href="movies/new_form" class="btn btn-primary">Add a New Movie</a></p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Title</th>
+          <th>Year</th>
+          <th>Duration</th>
+          <th>Description</th>
+          <th>Director ID</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @movies.each do |movie| %>
+        <tr>
+          <td><img src = "<% movie.image_url %>" width="80"></td>
+          <td><%= movie.title %></td>
+          <td><%= movie.year %></td>
+          <td><%= movie.duration %></td>
+          <td><%= movie.description %></td>
+          <td>ID to be filled in</td>
+          <td>
+            <a href="/movies/<%= movie.id %>" class="btn btn-primary">Show</a>
+          </td>
+          <td>Edit button</td>
+          <td>
+            <a href="/delete_movie/<%= movie.id %>" class="btn btn-primary">Delete</a>
+          </td>
+        </tr>
+
+      <% end %>
+    </tbody>
+</table>
