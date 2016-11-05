@@ -30,7 +30,7 @@ class MoviesController < ApplicationController
     @movie = Movie.find(params[:id])
     @movie.destroy
 
-    render("destroy")
+    render("index")
   end
 
   def edit_form

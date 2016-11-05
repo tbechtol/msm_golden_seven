@@ -18,30 +18,36 @@ Rails.application.routes.draw do
   #UPDATE
   get('/movies/:id/edit_form', { :controller => 'movies', :action => 'edit_form' })
   get('/update_movie/:id', { :controller => 'movies', :action => 'update_row' })
-  
+
   #DELETE
   get('/delete_movie/:id', { :controller => 'movies', :action => 'destroy' })
 
-  # routes for all Director resources:
 
-  #Create
+
+
+  # routes for all DIRECTOR resources:
+
+  #CREATE
   get('/', { :controller => 'directors', :action => 'new_form' })
 
-  #Read
+  #READ
   get('/directors', { :controller => 'directors', :action => 'index' })
   get('/directors/:id', { :controller => 'directors', :action => 'show' })
 
-  #Update
+  #UPDATE
 
 
-  #Delete
+  #DELETE
 
 
   # routes for all Actor resources:
 
+  #CREATE
+  get('/', { :controller => 'actors', :action => 'new_form' })
 
+  #READ
+  get('/actors', { :controller => 'actors', :action => 'index' })
 
-  # routes for all Movie resources:
 
 
 
