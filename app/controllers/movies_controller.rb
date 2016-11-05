@@ -22,15 +22,13 @@ class MoviesController < ApplicationController
     # @movie.director_id = params[:director_id]
     @movie.save
 
-    render("index")
+    render("show")
   end
 
 
   def destroy
     @movie = Movie.find(params[:id])
     @movie.destroy
-
-    render("index")
   end
 
   def edit_form
