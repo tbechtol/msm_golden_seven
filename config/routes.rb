@@ -24,13 +24,12 @@ Rails.application.routes.draw do
 
 
 
-
   # routes for all DIRECTOR resources:
 
   #CREATE
   get('/directors/new_form', { :controller => 'directors', :action => 'new_form' })
   get('/create_director', { :controller => 'directors', :action => 'create_row' })
-  
+
   #READ
   get('/directors', { :controller => 'directors', :action => 'index' })
   get('/directors/:id', { :controller => 'directors', :action => 'show' })
@@ -42,14 +41,25 @@ Rails.application.routes.draw do
   #DELETE
   get('/delete_director/:id', { :controller => 'directors', :action => 'destroy' })
 
-  # routes for all Actor resources:
+
+
+
+  # routes for all ACTOR resources:
 
   #CREATE
-  get('/', { :controller => 'actors', :action => 'new_form' })
+  get('/actors/new_form', { :controller => 'actors', :action => 'new_form' })
+  get('/create_actor', { :controller => 'actors', :action => 'create_row'})
 
   #READ
   get('/actors', { :controller => 'actors', :action => 'index' })
+  get('/actors/:id', {:controller => 'actors', :action => 'show' })
 
+  #UPDATE
+  get('actors/:id/edit_form', { :controller => 'actors', :action => 'edit_form'})
+  get('update_actor/:id', { :controller => 'actors', :action => 'update_row'})
+
+  #DELETE
+  get('/delete_actor/:id', { :controller => 'actors', :action => 'destroy' })
 
 
 
